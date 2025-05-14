@@ -1,0 +1,26 @@
+# Exclure les fichiers et modules liés au joueur random
+strategy_random.py
+
+# Exclure les scripts de lancement pour le mode multi-joueurs
+start_players_modular.py
+players_modular.json
+
+# Exclure les fichiers de test du random (si tu en ajoutes)
+test_strategy_random.py
+
+# Exclure les fichiers Python compilés et temporaires
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Exclure le fichier de trigger CI
+trigger.txt
+
+# Exclure les logs éventuels
+*.log
+*.json
+
+# Exclure les fichiers d'environnement virtuel
+venv/
+.env
