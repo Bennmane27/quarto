@@ -20,5 +20,4 @@ jobs:
         python -m pip install --upgrade pip
     - name: Run unit tests
       run: |
-        cd quarto
         python -m unittest discover -v
