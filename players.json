@@ -7,14 +7,5 @@
     "matricules": [
       "22145"
         ]
-  },
-  {
-    "host": "127.0.0.1",
-    "port_server": 3000,
-    "port_client": 8226,
-    "name": "Ladifa",
-    "matricules": [
-      "22307"
-        ]
   }
 ]

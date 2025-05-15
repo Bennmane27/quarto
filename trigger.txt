@@ -1,1 +1,9 @@
-# Juste pour relancer GitHub Actions
+# Pour synchroniser vos modifications avec le dépôt distant, utilisez :
+# 
+# Pour envoyer vos changements :
+git add .
+git commit -m "Amélioration de l'IA Karina : stratégie plus robuste, anticipation, et gestion des coups adverses"
+git push
+#
+# Pour récupérer les dernières modifications du dépôt distant :
+git pull
