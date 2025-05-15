@@ -54,8 +54,8 @@ python -m unittest test_unitaire.py
 
 ## Auteurs
 
-- **Karina** – 22269@ecam.be
-- **Ladifa**
+- **Karina Nemova** – 22145@ecam.be
+- **KHODE AMSETOU Ladifa** - 22307@ecam.be
 
 Projet réalisé dans le cadre du cours d’IA à l’ECAM.
 
