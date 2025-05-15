@@ -44,5 +44,34 @@ class TestStrategy(unittest.TestCase):
         with self.assertRaises(Exception):
             strategy.gen_move(state)
 
+    def test_same_true(self):
+        # Toutes les pièces partagent la même couleur
+        self.assertTrue(strategy.same(['BDEC', 'SDEC', 'BDFC', 'SDFC']))
+
+    def test_same_false(self):
+        # Pièces différentes sans attribut commun
+        self.assertFalse(strategy.same(['BDEC', 'SLFP', 'BDFC', 'SLEC']))
+
+    def test_get_lines(self):
+        board = [None]*16
+        lines = strategy.get_lines(board)
+        self.assertEqual(len(lines), 10)
+        # Teste la diagonale principale
+        diag = [board[i*5] for i in range(4)]
+        self.assertIn(diag, lines)
+
+    def test_is_winning(self):
+        # Ligne gagnante horizontale
+        board = ['BDEC', 'SDEC', 'BDEC', 'SDEC'] + [None]*12
+        self.assertTrue(strategy.is_winning(board))
+        # Pas de victoire
+        board = [None]*16
+        self.assertFalse(strategy.is_winning(board))
+
+    def test_valid_piece_regex(self):
+        self.assertTrue(strategy.VALID_PIECE.match('BDEC'))
+        self.assertFalse(strategy.VALID_PIECE.match('BDEZ'))
+        self.assertFalse(strategy.VALID_PIECE.match('1234'))
+
 if __name__ == '__main__':
     unittest.main()
